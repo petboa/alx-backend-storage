@@ -5,4 +5,5 @@ SELECT band_name,
              STR_TO_DATE(SUBSTRING_INDEX(lifespan, '-', 1), '%Y'), 
              STR_TO_DATE(SUBSTRING_INDEX(lifespan, '-', -1), '%Y')), 0) AS lifespan
 FROM metal_bands
-WHERE FIND_IN_SET('Glam rock', split);
+WHERE FIND_IN_SET('Glam rock', split)
+ORDER BY lifespan;
